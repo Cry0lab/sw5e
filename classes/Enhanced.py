@@ -17,12 +17,3 @@ for equipment in data:
         equipment_by_category[category] = []
     #Add the equipment to its category
     equipment_by_category[category].append(equipment)
-
-# Print the equipment lists by category
-for category, equipment_list in equipment_by_category.items():
-    print(category)
-    #prints - - to match the legnth of the category name
-    print("-" * len(category))
-    for equipment in equipment_list:
-        print(equipment["name"])
-    print()
