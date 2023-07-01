@@ -659,18 +659,19 @@ artifact_toggle = False
 
 #create_Black_Market_Dealer(shop_size, multiplier, party_level, artifact_toggle)
 
-#create_Weapon_Shop(1,5)
+#create_Weapon_Shop(1,4)
 #create_Armor_Shop(1, 5)
 #create_Medical_Shop(3, 2, 5, False)
 #create_Tech_Shop(1, 2, 5, False)
 #create_Cantina(1, 2, 5, False)
 
-i = 0
-while i > 0:
-    loot_individual(7, 6)
-    i -= 1
+#i = 5
+#while i > 0:
+    #loot_individual(7, 6)
+    #i -= 1
 
 #Light = enchanced_item_list_generator(LightweaponModification, 4, False)
 #equipment_printer_random_enhanced(1, 1, Light, "Loot", 4)
 #print(ShipArmor)
-loot_chest(8, 6)
+loot_chest(4, 4)
+
