@@ -13,15 +13,15 @@ class DND_Tools:
 
     def define_rarity_level(self,party_level):
         if party_level in range(1,5):
-            return 1
-        elif party_level in range(5,9):
             return 2
-        elif party_level in range(9,13):
+        elif party_level in range(5,9):
             return 3
-        elif party_level in range(13,17):
+        elif party_level in range(9,13):
             return 4
-        else:
+        elif party_level in range(13,17):
             return 5
+        else:
+            return 6
     
     def get_random_choice(self,item_list):
         return random.choice(item_list)
