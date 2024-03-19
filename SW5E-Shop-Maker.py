@@ -336,7 +336,7 @@ def starship_equipment_print_all():
         print(str(item["name"]) + "," + str(item["cost"]) + "," + str(item["type"]))
 
 def format_equipment(item):
-    print(str(item["name"].replace(',','')) + "," + str(item["cost"]))
+    print(str(item["name"].replace(',','')) + " | " + str(item["cost"]))
 
 def format_enchanced_item(item):
     cost = 0
@@ -363,7 +363,7 @@ def format_enchanced_item(item):
 
 
 
-    print(str(item["name"]).replace(',','') + "," + item["type"] + "," + item["searchableRarity"] + "," + str(cost))
+    print(str(item["name"]).replace(',','') + " | " + item["type"] + " | " + item["searchableRarity"] + " | " + str(cost))
 
 def format_enchanced_item_black_market(item):
     cost = 0
@@ -390,7 +390,7 @@ def format_enchanced_item_black_market(item):
 
 
 
-    print(str(item["name"]).replace(',','') + "," + item["type"] + "," + item["searchableRarity"] + "," + str(cost))
+    print(str(item["name"]).replace(',','') + " | " + item["type"] + " | " + item["searchableRarity"] + " | " + str(cost))
 def enchanced_item_list_generator(item_list,party_level,artifact_toggle):
     rarity = define_rarity_level(party_level)
     d20 = dice_roll(1,20)
@@ -653,25 +653,25 @@ def loot_chest(cr,party_level):
     print(str(random.randint(0,cr_level+1)) + " Repair Kits")
 
 shop_size = 3
-multiplier = 2
-party_level = 4
+multiplier = 3
+party_level = 7
 artifact_toggle = False
 
 #create_Black_Market_Dealer(shop_size, multiplier, party_level, artifact_toggle)
 
-#create_Weapon_Shop(1,4)
-#create_Armor_Shop(1, 5)
+#create_Weapon_Shop(shop_size,party_level)
+#create_Armor_Shop(shop_size, party_level)
 #create_Medical_Shop(3, 2, 5, False)
 #create_Tech_Shop(1, 2, 5, False)
-#create_Cantina(1, 2, 5, False)
+#create_Cantina(shop_size, multiplier, party_level, False)
 
-#i = 5
+#i = 2
 #while i > 0:
-    #loot_individual(7, 6)
-    #i -= 1
+#    loot_individual(14, party_level)
+#    i -= 1
 
 #Light = enchanced_item_list_generator(LightweaponModification, 4, False)
 #equipment_printer_random_enhanced(1, 1, Light, "Loot", 4)
 #print(ShipArmor)
-loot_chest(4, 4)
+loot_chest(7, party_level)
 
